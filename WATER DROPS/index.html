@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Drops</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="drops lightblue"></div>
+    <div class="drops lightblue"></div>
+    <div class="box">
+        <div class="wave lightblue"></div>
+    </div>
+</div>
+<div class="hilt">
+    <div class="handle"></div>
+</div>
+<script>
+    var wave = document.querySelector('.wave');
+    var bottom = -170;
+
+    window.addEventListener('load', function(){
+        move();
+
+    });
+    function move(){
+        var id = setInterval(frame, 2000);
+        function frame(){
+            if(bottom >= -120){
+                wave.style.bottom = bottom + "%";
+                bottom = bottom - 25;
+                
+            }else {
+                wave.style.bottom = bottom + "%";
+                bottom = bottom -(-15);
+                
+            }
+        }
+    }
+</script>
+</body>
+</html>
